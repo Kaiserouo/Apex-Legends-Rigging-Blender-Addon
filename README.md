@@ -1,7 +1,7 @@
 # Apex Legends Rigging Blender Addon
 Blender addon for rigging Apex Legend's characters etc.
 
-Follows the guide in [this video](https://www.youtube.com/watch?v=NJ_M1W85KYA) about rigging. This addon do the rigging automatically so mo manual copy & paste and stuff needed.
+Follows the guide in [this video](https://www.youtube.com/watch?v=NJ_M1W85KYA) about rigging. This addon do the rigging automatically so no manual copy & paste stuff needed.
 
 Most importantly, you can use the `Auto IK` (Auto Inverse Kinematics) functionality built inside Blender to make posing way easier. Not as properly as Auto Rig Pro did it, but still way better than posing imported models directly with FK (Forward Kinematics).
 
@@ -50,4 +50,4 @@ Notes:
 ### Bloodhound's Pipe
 Rigging & bone connecting for Bloodhound's pipe is also supported. Make sure the selected legend has Bloodhound's pipes on it (i.e. `def_c_top_rope_1` ~ `def_c_top_rope_12`)
 
-The steps is the same as above. After rigging, connecting & opening Auto IK, you can control Bloodhound's pipe by grabbing `def_c_top_rope_12` (the one closest to the mask). 
+The steps is the same as above but has its own options (e.g. `Rig Selected Bloodhound's Pipe`). After rigging, connecting & opening Auto IK, you can control Bloodhound's pipe by grabbing `def_c_top_rope_12` (the one closest to the mask). 

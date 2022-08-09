@@ -1,11 +1,12 @@
 bl_info = {
     "name": "Apex Rigging Addon",
-    "description": "Addon that helps Apex Legends character rigging."
-    "author": "Kaiserouo"
-    "version": (1, 0)
+    "description": "Addon that helps Apex Legends character rigging.",
+    "author": "Kaiserouo",
+    "version": (1, 0),
     "blender": (2, 80, 0),
-    "location": "View3D > Object Context Menu / Pose Context Menu > Apex Rigging"
-    "category": "Object",
+    "location": "View3D > Object Context Menu / Pose Context Menu > Apex Rigging",
+    "doc_url": "https://github.com/Kaiserouo/Apex-Legends-Rigging-Blender-Addon",
+    "category": "Object"
 }
 
 import bpy
