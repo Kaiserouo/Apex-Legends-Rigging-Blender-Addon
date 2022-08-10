@@ -33,3 +33,7 @@ def setRotationLock(obj, mode, xyz_tuple, bone_name_ls):
         bone.rotation_mode = mode
         for i in range(3):
             bone.lock_rotation[i] = xyz_tuple[i]
+
+def setAllBoneRotationMode(obj, mode):
+    for bone in obj.pose.bones:
+        bone.rotation_mode = mode

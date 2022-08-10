@@ -93,6 +93,18 @@ class ApexBoneUnlockRotation(bpy.types.Operator):
             util.setRotationLock(obj, mode, (False, False, False), bone_name_ls)
         return {'FINISHED'}
 
+class ApexBoneSetRotationToXYZ(bpy.types.Operator):
+    """Set all bones of the selected model's rotation mode to XYZ Euler"""
+    bl_idname = "apexaddon.set_rotation_xyz"
+    bl_label = "Set bones rotation mode to XYZ Euler"
+    bl_options = {'REGISTER', 'UNDO'}
+
+    def execute(self, context):
+        obj = context.active_object
+        
+        util.setAllBoneRotationMode(obj, 'XYZ')
+        return {'FINISHED'}
+
 # ---
 
 # classes, None act as separator in menu
@@ -106,7 +118,10 @@ classes = (
     ApexPipeDisconnect,
     None,
     ApexBoneLockRotation,
-    ApexBoneUnlockRotation)
+    ApexBoneUnlockRotation,
+    None,
+    ApexBoneSetRotationToXYZ
+)
 
 class Submenu(bpy.types.Menu):
     bl_idname = "OBJECT_MT_apex_submenu"
