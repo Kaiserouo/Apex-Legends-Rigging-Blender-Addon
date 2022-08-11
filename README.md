@@ -5,6 +5,8 @@ Follows the guide in [this video](https://www.youtube.com/watch?v=NJ_M1W85KYA) a
 
 Most importantly, you can use the `Auto IK` (Auto Inverse Kinematics) functionality built inside Blender to make posing way easier. Not as properly as Auto Rig Pro did it, but still way better than posing imported models directly with FK (Forward Kinematics).
 
+**RIGGING WILL MAKE THE MODEL IMCOMPATIBLE WITH IMPORTED ANIMATION!** ref. `Functionality > Rigging > Note` below for detailed description.
+
 ## Installation
 1. Clone this repository and zip it, or just download as zip file on Github.
 2. `Edit -> Preferences -> Add-ons -> Install..` and choose the zip file.
@@ -22,9 +24,15 @@ Notes:
 + No renaming needed. I think the video did the renaming to perform mirroring. By not renaming the bones we can still import the animations just fine, even after rigging.
 + "Rigging" is defined as "changing bone's head and tail position". This will make imported animation break as discussed below.
 + You could do your posing now, but only FK (forward kinematics) available, just like before rigging. But rigging makes the bones more easily to select.
-+ **You CANNOT import animation directly onto this model after rigging!** Due to how animation imports, it will mess up the pose. If you want to import animation, you have 2 options:
-   1. **Do the import & clear animation BEFORE rigging**. You can still use the pose you want to start from and rig from there. Note that if you import and immediately rig the model, the animation will look weird, so just choose one frame and clear animation.
-   2. Use Pose Library to copy the pose from other model to this model. This will also break but not in a disasterous way. Still unusable in my opinion.
++ **WILL MESS UP IMPORTED ANIMATION!** 
+  + This rigging method is destined to not be compatible with imported animation. The changing of bone tail position messes up rotation, so the imported rotation information is not compatible with the bones after rigging.
+  + Basically any importing method will mess up the pose in some ways (e.g. directly import; use pose library to copy from other models; rig before or after importing; etc.).
+  + But some of the animation would look...less messed up. You can start posing from there if you want.
+  + **It is suggested to use this only if you want to pose from the ground up.**
+
+> In theory, you might be able to calculate new pose-mode rotation from imported rotation information, but I cannot find a way to calculate that after hours of research. I am just not good at CG-related math.
+> 
+> If you can somehow fix this it will be appreciated.
 
 ### Connect Bones
 To use `Auto IK` functionality inside Blender, bones needs to be connected.
